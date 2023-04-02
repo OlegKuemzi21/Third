@@ -41,7 +41,7 @@ export const Home = () => {
       <div className="pt-28">
         <h1 className="text-3xl font-bold text-center mb-20">Outfits</h1>
         <div className="flex items-start justify-start  ml-12 ">
-          <div className="relative">
+          <div className="relative ml-12">
             <input
               id="search"
               type={"text"}

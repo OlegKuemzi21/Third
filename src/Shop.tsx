@@ -9,36 +9,38 @@ export const Shop = (prop: ProductProps) => {
   const [show, setShow] = useState(false);
 
   return (
-    <div className="py-4 inline-flex ml-12 box-border ">
-      <div className="w-52 ">
-        <ul className="max-w-sm">
-          <li className="border-2 rounded-lg py-4 border-borderB ">
-            <img
-              src={prop.productOne.image}
-              alt={prop.productOne.title}
-              className=" pb-6 block mx-auto object-scale-down h-40 w-40 "
-            />
-            <p className="font-bold border-t-2 px-4  pt-4 border-borderB leading-5 break-word ">
-              {prop.productOne.title}
-            </p>
-            <p className="pl-4 text-lg italic my-2">
-              Price:{prop.productOne.price}$
-            </p>
-            <button
-              className="py-2 px-4 border bg-blue-400 rounded ml-2 "
-              onClick={() => setShow((prev) => !prev)}
-            >
-              {show ? "Hide details" : "Show details"}
-            </button>
+    <div className="inline-flex ">
+      <ul className="border-2 rounded-lg py-4 border-borderB ml-24 my-6 w-64">
+        <li className="h-70">
+          <img
+            src={prop.productOne.image}
+            alt={prop.productOne.title}
+            className=" pb-6 p-2 block mx-auto object-scale-down h-36  w-36 "
+          />
 
-            {show && (
-              <div className="pl-2 ">
-                <p>{prop.productOne.description}</p>
-              </div>
-            )}
-          </li>
+          <p className="font-bold border-t-2 pl-2 pt-4 border-borderB overflow-hidden max-h-10">
+            {prop.productOne.title}
+          </p>
 
-          {/* <li className="border-2 rounded-lg  border-borderB">
+          <p className="pl-2 font-bold text-base italic my-2">
+            Price:{prop.productOne.price}$
+          </p>
+          <button
+            className="py-2 px-4 border bg-blue-400 rounded-lg ml-1 "
+            onClick={() => setShow((prev) => !prev)}
+          >
+            {show ? "Hide details" : "Show details"}
+          </button>
+
+          {show && (
+            <div className="pl-2 font-medium ">
+              <p>{prop.productOne.description}</p>
+            </div>
+          )}
+        </li>
+      </ul>
+
+      {/* <li className="border-2 rounded-lg  border-borderB">
           <img
             src={prop.productOne.image}
             alt=" There are photo"
@@ -51,8 +53,8 @@ export const Shop = (prop: ProductProps) => {
             Price:{prop.productOne.price}$
           </h4>
         </li> */}
-        </ul>
-      </div>
     </div>
   );
 };
+
+//  max-w-xs
